@@ -50,7 +50,7 @@ kubectl expose deployment platform-test --type=LoadBalancer --port 8000
 ```
 
 ## Check it out!
-_ For the sake of demo, last deployed IP is 35.193.48.65 _
+_For the sake of demo, last deployed IP is 35.193.48.65_
 ```bash
 # It may take a a minute after the previous step for the service to be available for requests
 export IP=$(kubectl get service platform-test -o jsonpath={.status.loadBalancer.ingress[*].ip})
